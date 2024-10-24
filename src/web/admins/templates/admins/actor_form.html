@@ -21,7 +21,7 @@
         <div class="col-12 col-sm-12">
             <div class="card shadow-lg">
                 <div class="card-body">
-                    <form method="post" novalidate>
+                    <form method="post" novalidate enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form.non_field_errors }}
                         {{ form|crispy }}
