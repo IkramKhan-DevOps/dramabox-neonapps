@@ -58,5 +58,5 @@ class EpisodeForm(forms.ModelForm):
     class Meta:
         model = Episode
         fields = ['title', 'description', 'episode_number', 'release_date',
-                  'duration', 'is_free',
+                  'duration', 'is_free','is_active'
                   ]
