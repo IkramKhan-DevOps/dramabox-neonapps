@@ -13,6 +13,7 @@
     <meta name="developer" content="dramaverse.info">
     <meta name="org-name" content="dramaverse"/>
     <link rel="icon" href="
+
             {% if app.favicon %}{{ app.favicon.url }}{% else %}{% static 'website/img/logo/white-logo.png' %}{% endif %}">
 
     <title>
@@ -45,6 +46,11 @@
 </head>
 <body data-topbar="dark" data-layout="horizontal">
 
+<div class="text-center my-4">
+    <img src="{% static 'website/img/logo/white-logo.png' %}" height="50">
+</div>
+
+
 {% block only-body %}
 
     <!-- Begin page -->
@@ -63,22 +69,19 @@
 
                 <div class="page-content ">
                     <div class="container-fluid mt-0">
+
                         <div class="row">
                             {% include 'messages.html' %}
                         </div>
 
-                        <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
                                     <h4 class="mb-0 font-size-18">
-
                                         {% block page_heading %} {% endblock %}</h4>
-
                                 </div>
                             </div>
                         </div>
-                        <!-- end page title -->
 
                         <div class="row">
                             <div class="col-12">
@@ -87,6 +90,7 @@
                                 {% endblock %}
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
